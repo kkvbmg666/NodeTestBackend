@@ -1,0 +1,24 @@
+GET http://localhost:5984/subscribers
+
+###
+
+GET http://localhost:5984/subscribers/15
+
+###
+
+POST http://localhost:5984/subscribers
+Content-Type: application/json
+        
+{
+"name":"Navya",
+"channel":"Amazon AWS"
+}
+
+###
+
+PATCH http://localhost:5984/subscribers
+Content-Type: application/json
+
+{
+    "name": "Ashnoor"
+}
