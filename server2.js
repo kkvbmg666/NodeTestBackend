@@ -26,7 +26,7 @@ app.use('/',indexRouter)
 
 
 app.listen(process.env.PORT || 5984, ()=>{
-    console.log("Server Started on port "+process.env.PORT);
+    console.log("Server started on port "+process.env.PORT);
 });
 
 
