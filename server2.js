@@ -25,7 +25,7 @@ db.once('open', ()=>console.error("Connected to DB"))
 app.use('/',indexRouter)
 
 
-app.listen(process.env.PORT || 5555, ()=>{
+app.listen(process.env.PORT || 5984, ()=>{
     console.log("Server Started on port "+process.env.PORT);
 });
 
