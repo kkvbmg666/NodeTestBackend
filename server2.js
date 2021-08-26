@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts') 
 const indexRouter = require('./routes/index')
+const authorRouter = require('./routes/authors')
+const bodyParser = require('body-parser')
 
 app.set('view engine','ejs')
 app.set('views', __dirname + '/views')
@@ -24,6 +26,7 @@ db.once('open', ()=>console.error("Connected to DB"))
 
 app.use('/',indexRouter)
 
+app.use('/authors',authorRouter)
 
 app.listen(process.env.PORT || 5984, ()=>{
     console.log("Server Started on port "+process.env.PORT);
